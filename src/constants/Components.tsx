@@ -1,8 +1,9 @@
-import { Children, FC } from "react";
+import { Children, FC, CSSProperties } from "react";
 import { BrowserRouter, Routes } from "react-router-dom";
-import { LogoWrapper, StyledButton } from "../styles/Components.styled";
+import { LogoWrapper, Page, StyledButton } from "../styles/Components.styled";
 import { BsCameraVideoFill } from "react-icons/bs";
 import { ButtonProps } from "./Types";
+import { motion } from "framer-motion";
 export const HOC: FC = ({ children }) => {
   return (
     <BrowserRouter>
@@ -30,8 +31,27 @@ export const Button: FC<ButtonProps> = (props) => {
       style={props.viewStyle}
       color={props.color}
       about={props.backgroundColor}
+      onClick={props.onClick}
     >
       {props.children}
     </StyledButton>
+  );
+};
+
+export const FadedAnimationWrapper: FC<{ style?: CSSProperties }> = ({
+  children,
+  style,
+}) => {
+  return (
+    <Page
+      animate={{
+        opacity: 1,
+      }}
+      initial={{
+        opacity: 0,
+      }}
+    >
+      {children}
+    </Page>
   );
 };

@@ -1,12 +1,13 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { accentColor } from "../Constants/Constants";
 
-export const Page = styled.div`
+export const Page = styled(motion.div)`
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 `;
 

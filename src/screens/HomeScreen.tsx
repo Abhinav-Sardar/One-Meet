@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FC, useEffect } from "react";
-import { Button, Logo } from "../Constants/Components";
+import { useNavigate } from "react-router-dom";
+import { Button, FadedAnimationWrapper, Logo } from "../Constants/Components";
 import { accentColor } from "../Constants/Constants";
 import { Page, Selectable } from "../styles/Components.styled";
 import { Header, MainContent } from "../styles/HomeScreen.styled";
@@ -8,9 +9,13 @@ const HomeScreen: FC = () => {
   useEffect(() => {
     document.title = "One-Meet";
     document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
+  const navigate = useNavigate();
   return (
-    <Page>
+    <FadedAnimationWrapper>
       <Header>
         <Logo size={3.5} />.<Selectable>One-Meet</Selectable>
       </Header>
@@ -52,7 +57,9 @@ const HomeScreen: FC = () => {
           }}
         >
           <Button
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/create-meet");
+            }}
             color="white"
             backgroundColor={accentColor}
           >
@@ -60,7 +67,7 @@ const HomeScreen: FC = () => {
           </Button>
         </div>
       </MainContent>
-    </Page>
+    </FadedAnimationWrapper>
   );
 };
 export default HomeScreen;
