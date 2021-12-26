@@ -14,9 +14,9 @@ export const CreateRoomContent = styled.main`
   display: flex;
 `;
 export const VideoContainer = styled.div`
-  border: 1px solid black;
   flex: 1.5;
   display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -26,10 +26,17 @@ export const VideoContainer = styled.div`
     height: 65%;
     border-radius: 10px;
     position: relative;
+    video {
+      position: absolute;
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
   }
 `;
 export const JoinInfo = styled.div`
-  border: 1px solid black;
   flex: 1;
 `;
 
@@ -37,15 +44,14 @@ export const Controls = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  border: 1px solid white;
   height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 export const ControlButton = styled.button`
-  height: 10.5vh;
-  width: 10.5vh;
+  height: 65px;
+  width: 65px;
   border: 0;
   outline: 0;
   border-radius: 50%;
@@ -57,9 +63,21 @@ export const ControlButton = styled.button`
   background: ${(pr) => pr.color};
   svg {
     color: white;
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
   transition: 400ms ease-in-out;
   &:hover {
   }
+`;
+
+export const MediaStatusText = styled.span`
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  font-family: Poppins;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 `;

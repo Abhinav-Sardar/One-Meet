@@ -33,20 +33,21 @@ export const LogoWrapper = styled.div`
 export const StyledButton = styled.button`
   border: none;
   outline: none;
-  padding: 0 2vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding: 0 1vw;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
   height: 8vh;
   transition: 400ms ease-in-out;
   cursor: pointer;
+  border: 1px solid ${(pr) => pr.about};
   background-color: ${(pr) => pr.about};
   color: ${(pr) => pr.color};
   &:hover {
     background-color: ${(pr) => pr.color};
     color: ${(pr) => pr.about};
   }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
