@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -58,4 +59,8 @@ body {
 
 video {
   transform: rotateY(180deg);
+}
+.modal-body {
+  flex: 1;
+  width: 100%;
 }

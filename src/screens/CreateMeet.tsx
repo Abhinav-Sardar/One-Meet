@@ -26,6 +26,7 @@ import {
   Controls,
   CreateMeetHeader,
   CreateRoomContent,
+  InputField,
   JoinInfo,
   MediaStatusText,
   VideoContainer,
@@ -97,6 +98,7 @@ const CreateMeet: FC = () => {
             </MediaStatusText>
             <Controls>
               <ControlButton
+                disabled={!isGranted}
                 color={isMicOpen ? "transparent" : accentColor}
                 className="ripple"
                 onClick={() => setIsMicOpen(!isMicOpen)}
@@ -104,6 +106,7 @@ const CreateMeet: FC = () => {
                 {isMicOpen ? <BsMic /> : <BsMicMute />}
               </ControlButton>
               <ControlButton
+                disabled={!isGranted}
                 color={isCameraOpen ? "transparent" : accentColor}
                 onClick={() => setIsCameraOpen(!isCameraOpen)}
               >
@@ -132,7 +135,16 @@ const CreateMeet: FC = () => {
             <span>Audio And Video Settings</span>
           </Button>
         </VideoContainer>
-        <JoinInfo></JoinInfo>
+        <JoinInfo>
+          <InputField>
+            <Selectable>Name</Selectable>
+            <input type="text" />
+          </InputField>
+          <InputField>
+            <Selectable>Room Name</Selectable>
+            <input type="text" />
+          </InputField>
+        </JoinInfo>
       </CreateRoomContent>
 
       <Modal

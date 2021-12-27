@@ -131,6 +131,7 @@ export const Modal = (props: ModalProps) => {
               <Selectable>{props.title}</Selectable>
               <MdClose onClick={props.onClose} />
             </div>
+            <div className="modal-body">{props.children}</div>
           </motion.div>
         </>
       )}

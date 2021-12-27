@@ -36,8 +36,12 @@ export const VideoContainer = styled.div`
     }
   }
 `;
-export const JoinInfo = styled.div`
+export const JoinInfo = styled.form`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  alogn-items: center;
+  justify-content: center;
 `;
 
 export const Controls = styled.div`
@@ -61,6 +65,7 @@ export const ControlButton = styled.button`
   margin: 0 1vw;
   border: 1px solid white;
   background: ${(pr) => pr.color};
+  cursor: pointer;
   svg {
     color: white;
     font-size: 1.7vw;
@@ -80,4 +85,27 @@ export const MediaStatusText = styled.span`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+`;
+
+export const InputField = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  span {
+    font-size: 30px;
+  }
+  input {
+    width: 70%;
+    height: 35px;
+    caret-color: ${accentColor};
+    border: 2px solid black;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    padding: 0 5px;
+    &:focus {
+      border: 2px solid ${accentColor};
+    }
+  }
 `;
