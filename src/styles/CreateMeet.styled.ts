@@ -14,14 +14,14 @@ export const CreateRoomContent = styled.main`
   display: flex;
 `;
 export const VideoContainer = styled.div`
-  flex: 1.5;
+  flex: 1;
   display: flex;
 
   flex-direction: column;
   align-items: center;
   justify-content: center;
   .video-container {
-    width: 80%;
+    width: 90%;
     background-color: #262626;
     height: 65%;
     border-radius: 10px;
@@ -40,8 +40,14 @@ export const JoinInfo = styled.form`
   flex: 1;
   display: flex;
   flex-direction: column;
-  alogn-items: center;
+  align-items: center;
   justify-content: center;
+  .btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Controls = styled.div`
@@ -88,24 +94,16 @@ export const MediaStatusText = styled.span`
 `;
 
 export const InputField = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
+  font-family: "Poppins", sans-serif !important;
+  margin: 2vh 0;
   span {
     font-size: 30px;
+    font-family: "Poppins", sans-serif !important;
   }
   input {
-    width: 70%;
-    height: 35px;
-    caret-color: ${accentColor};
-    border: 2px solid black;
-    outline: 0;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    padding: 0 5px;
-    &:focus {
-      border: 2px solid ${accentColor};
-    }
+    height: 30px;
   }
 `;

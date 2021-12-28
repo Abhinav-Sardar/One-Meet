@@ -33,11 +33,11 @@ export const LogoWrapper = styled.div`
 export const StyledButton = styled.button`
   border: none;
   outline: none;
-  padding: 0 1vw;
+  padding: 0 0.7vw;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
-  height: 8vh;
+  height: 6vh;
   transition: 400ms ease-in-out;
   cursor: pointer;
   border: 1px solid ${(pr) => pr.about};

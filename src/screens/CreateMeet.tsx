@@ -94,7 +94,7 @@ const CreateMeet: FC = () => {
             ></video>
             <MediaStatusText>
               {!isGranted && "Please allow camera and microphone access"}
-              {!isCameraOpen && "Camera Closed"}
+              {!isCameraOpen && isGranted && "Camera Closed"}
             </MediaStatusText>
             <Controls>
               <ControlButton
@@ -144,6 +144,18 @@ const CreateMeet: FC = () => {
             <Selectable>Room Name</Selectable>
             <input type="text" />
           </InputField>
+          <div className="btn-wrapper">
+            <Button
+              rest={{
+                type: "submit",
+              }}
+              color="white"
+              backgroundColor={accentColor}
+              onClick={() => {}}
+            >
+              Create Room
+            </Button>
+          </div>
         </JoinInfo>
       </CreateRoomContent>
 

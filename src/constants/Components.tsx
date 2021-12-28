@@ -39,6 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
       color={props.color}
       about={props.backgroundColor}
       onClick={props.onClick}
+      {...props.rest}
     >
       {props.children}
     </StyledButton>
