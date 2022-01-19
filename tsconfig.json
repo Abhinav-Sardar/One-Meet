@@ -14,7 +14,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "pretty": true,
+    "removeComments": true
   },
-  "include": ["src", "src/index.tsx"]
+  "include": ["src"]
 }
