@@ -1,15 +1,17 @@
-import { FC } from "react";
-import HomeScreen from "../Screens/HomeScreen";
-import NotFound from "../Screens/NotFound";
+import { ButtonHTMLAttributes, FC } from "react";
 
-type Routes = "/" | "/create-meeting" | "/join-meeting" | "/meeting" | "*";
-type RouteData = {
-  [K in Routes]: FC;
+type Routes =
+  | "*"
+  | "/"
+  | "create-meeting"
+  | "join-meeting"
+  | "meeting/:meetingId";
+
+export type RoutesType = {
+  [key in Routes]: FC;
 };
-export const RoutesData: RouteData = {
-  "/": HomeScreen,
-  "/create-meeting": HomeScreen,
-  "/join-meeting": HomeScreen,
-  "/meeting": HomeScreen,
-  "*": NotFound,
-};
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLElement> {
+  background: string;
+  foreGround: string;
+}
