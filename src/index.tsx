@@ -1,6 +1,4 @@
 import { FC } from "react";
 import ReactDOM from "react-dom";
-const App: FC = () => {
-  return <h1>HELLLO I AM THE APP</h1>;
-};
+import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
