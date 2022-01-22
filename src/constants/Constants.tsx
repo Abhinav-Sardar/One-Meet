@@ -1,9 +1,10 @@
+import CreateRoom from "../Screens/CreateRoom";
 import HomeScreen from "../Screens/HomeScreen";
 import { RoutesType } from "./Types";
 const routes: RoutesType = {
-  "*": () => <div>404</div>,
+  "*": () => <div>404 not found</div>,
   "/": HomeScreen,
-  "create-meeting": () => <div style={{}}>Create Meeting</div>,
+  "create-meeting": CreateRoom,
   "join-meeting": () => <div>Join Meeting</div>,
   "meeting/:meetingId": () => <div>Meeting</div>,
 };

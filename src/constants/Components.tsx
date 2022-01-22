@@ -1,8 +1,9 @@
-import { ButtonHTMLAttributes, CSSProperties, FC } from "react";
+import { CSSProperties, FC } from "react";
 import { AccentTextBase, ButtonBase } from "../Styles/Components.styled";
 import { accentColor } from "./Constants";
 import { BsCameraVideoFill } from "react-icons/bs";
 import { ButtonProps } from "./Types";
+import { motion } from "framer-motion";
 export const AccentText: FC<CSSProperties> = ({ children, ...rest }) => {
   return (
     <AccentTextBase style={{ ...rest, color: accentColor }}>
@@ -46,5 +47,21 @@ export const Button: FC<ButtonProps> = ({
     >
       {children}
     </ButtonBase>
+  );
+};
+
+export const FadedPageWrapper: FC = ({ children }) => {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+      }}
+    >
+      {children}
+    </motion.div>
   );
 };
